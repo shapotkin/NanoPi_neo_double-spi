@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "In any text editor please remove uart3{} and uart3_rts_cts{} sections";
+echo "and all rows with uart3=..., uart3_pins=... and uart3_rts_cts_pins=... parameters";
+echo "Then go to step 3"

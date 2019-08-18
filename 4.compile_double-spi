@@ -1,0 +1,13 @@
+#!/bin/bash
+
+armbian-add-overlay double-spi.dts
+if [ -f "/boot/overlay-user/double-spi.dtbo" ]; 
+then 
+echo "double-spi.dtbo has been compiled";
+echo "and placed to /boot/overlay-user"; 
+echo "Please remove  all parameters about spi from ""overlay=...""";
+echo "and all rows with ""param_spi_...""";
+echo "Then reboot and check /dev for spidev0.0 and spidev1.0";
+else
+echo "Something wrong. double-spi.dtbo didn't found in /boot/overlay-user";
+fi

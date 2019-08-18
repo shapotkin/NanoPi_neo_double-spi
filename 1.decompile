@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp /boot/dtb/sun8i-h3-nanopi-neo.dtb ./sun8i-h3-nanopi-neo.dtb.old
+echo "/boot/dtb/sun8i-h3-nanopi-neo.dtb has been stored as ./sun8i-h3-nanopi-neo.dtb.old"
+dtc -b 0 -O dts -I dtb -o sun8i-h3-nanopi-neo.dts /boot/dtb/sun8i-h3-nanopi-neo.dtb
+echo "sun8i-h3-nanopi-neo.dtb has been decompiled to ./sun8i-h3-nanopi-neo.dts";
+rm /boot/dtb/sun8i-h3-nanopi-neo.dtb

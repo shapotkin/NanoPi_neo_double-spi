@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dtc -b 0 -O dtb -I dts -o  /boot/dtb/sun8i-h3-nanopi-neo.dtb sun8i-h3-nanopi-neo.dts
+if [ -f "/boot/dtb/sun8i-h3-nanopi-neo.dtb" ]; then
+   echo "/boot/dtb/sun8i-h3-nanopi-neo.dtb has been compiled"
+else
+   echo "ERROR. /boot/dtb/sun8i-h3-nanopi-neo.dtb didn't created."
+fi
